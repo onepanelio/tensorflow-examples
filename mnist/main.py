@@ -29,9 +29,9 @@ def get_compiled_model():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--epochs", default=5, help="number of epochs to train model for")
+    parser.add_argument("--epochs", default=5, type=int, help="number of epochs to train model for")
     parser.add_argument("--save_model", default=True, help="save model")
-    parser.add_argument("--batch_size", default=64)
+    parser.add_argument("--batch_size", default=64, type=int)
     args = parser.parse_args()
 
     #define and compile model
